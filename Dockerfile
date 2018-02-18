@@ -1,7 +1,7 @@
 FROM leifg/elixir:latest
 
 # install postgres client
-RUN apk add --no-cache postgresql-client
+RUN apk add --no-cache postgresql-client git
 
 
 RUN mix new es_wrapper
@@ -14,6 +14,5 @@ ENTRYPOINT ["entrypoint.sh"]
 
 WORKDIR /es_wrapper
 
-ENV EVENTSTORE_VERSION=0.13.2
 RUN mix deps.get
 RUN mix compile

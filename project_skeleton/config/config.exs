@@ -1,5 +1,9 @@
 use Mix.Config
 
+config :eventstore,
+  registry: :local,
+  column_data_type: "jsonb"
+
 config :eventstore, EventStore.Storage,
   serializer: Commanded.Serialization.JsonSerializer,
   username: System.get_env("POSTGRES_USER"),

@@ -19,7 +19,7 @@ defmodule EsWrapper.Mixfile do
 
   defp deps do
     [
-      {:eventstore, System.get_env("EVENTSTORE_VERSION")},
+      {:eventstore, github: "commanded/eventstore", override: true},
     ]
   end
 end
