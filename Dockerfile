@@ -14,6 +14,6 @@ ENTRYPOINT ["entrypoint.sh"]
 
 WORKDIR /es_wrapper
 
-ENV EVENTSTORE_VERSION=0.13.2
+ENV EVENTSTORE_VERSION=0.14.0
 RUN mix deps.get
 RUN mix compile
